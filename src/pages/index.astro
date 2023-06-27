@@ -1,19 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import Firma from "../components/Firma.astro";
+
+const todoPost = await Astro.glob("../content/*.md")
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Bienvenido a <span class="text-gradient">Mis componenetes</span></h1>
-	
+		<Header
+			title = "Bienvenidos"
+			span="a mis componentes"
+		/>
 		<ul role="list" class="link-card-grid">
-			<Card
-				tags="javascript"
-				title="Mi primer tips de componenetes"
-				time="25/06/23"
-			/>
+			{
+				todoPost.map(i => (
+					<Card
+					tags={i?.frontmatter?.etiqueta}
+					title={i?.frontmatter?.titulo}
+					time={i?.frontmatter?.fecha}
+					/>
+				))
+			}
 		</ul>
+		<Firma nombre="Jose Tomas Mendoza Puentes" corazon="♥"/>
 	</main>
 </Layout>
 
@@ -23,18 +34,7 @@ import Card from '../components/Card.astro';
 		padding: 1.5rem;
 		max-width: 600px;
 	}
-	h1 {
-		font-size: 2rem !important;
-		font-weight: 800 !important;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
+	
 	.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
