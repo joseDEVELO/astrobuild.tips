@@ -1,10 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Header from '../components/Header.astro';
-import Firma from "../components/Firma.astro";
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import Header from '../../components/Header.astro';
+import Firma from "../../components/Firma.astro";
+import {getCollection} from "astro:content";
 
-const todoPost = await Astro.glob("../content/tips/*.md")
+const todoPost = (await getCollection("tips")).sort(
+    (a, b) => a.data.fecha.valueOf() - b.data.fecha.valueOf()
+);
+console.log(todoPost);
 ---
 
 <Layout title="Welcome to Astro.">
@@ -17,9 +21,10 @@ const todoPost = await Astro.glob("../content/tips/*.md")
 			{
 				todoPost.map(i => (
 					<Card
-					tags={i?.frontmatter?.etiqueta}
-					title={i?.frontmatter?.titulo}
-					time={i?.frontmatter?.fecha}
+					tags={i.data.etiqueta}
+					title={i.data.titulo}
+					time={i.data.fecha}
+					slug={i.slug}
 					/>
 				))
 			}
