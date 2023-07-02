@@ -6,9 +6,8 @@ import Firma from "../../components/Firma.astro";
 import {getCollection} from "astro:content";
 
 const todoPost = (await getCollection("tips")).sort(
-    (a, b) => a.data.fecha.valueOf() - b.data.fecha.valueOf()
+    (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
-console.log(todoPost);
 ---
 
 <Layout title="Welcome to Astro.">
@@ -22,8 +21,8 @@ console.log(todoPost);
 				todoPost.map(i => (
 					<Card
 					tags={i.data.etiqueta}
-					title={i.data.titulo}
-					time={i.data.fecha}
+					title={i.data.title}
+					time={i.data.pubDate}
 					slug={i.slug}
 					/>
 				))

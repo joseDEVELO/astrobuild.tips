@@ -1,6 +1,6 @@
 ---
-titulo: "Hola Astro!"
-fecha: 26/07/23
+title: "Hola Astro!"
+pubDate: 2023-06-15
 etiqueta: ["astro ","JS"]
 descripcion: "recomendaciones"
 imagen: https://api.slingacademy.com/public/sample-photos/2.jpeg

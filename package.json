@@ -11,14 +11,28 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.16.2",
+    "@astrojs/mdx": "^0.19.7",
+    "@astrojs/react": "^2.2.1",
+    "@astrojs/rss": "^2.1.0",
+    "@astrojs/sitemap": "^1.0.1",
+    "@astrojs/svelte": "^3.1.0",
     "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.7.0",
+    "@astrojs/vue": "^2.2.1",
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "astro": "^2.7.2",
     "npm-check-updates": "^16.10.13",
-    "tailwindcss": "^3.3.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "svelte": "^4.0.1",
+    "tailwindcss": "^3.3.2",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "prettier": "^2.8.4",
-    "prettier-plugin-astro": "^0.8.0"
+    "prettier": "^2.8.8",
+    "prettier-plugin-astro": "^0.10.0"
   }
 }
