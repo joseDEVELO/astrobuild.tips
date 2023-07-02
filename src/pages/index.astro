@@ -22,7 +22,7 @@ const todoPost = (await getCollection("tips")).sort(
 				todoPost.map(i => (
 					<Card
 					tags={i.data.etiqueta}
-					title={i.data.titulo}
+					title={i.data.title}
 					time={i.data.pubDate}
 					slug={i.slug}
 					/>
