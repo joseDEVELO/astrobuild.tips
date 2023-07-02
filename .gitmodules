@@ -1,0 +1,3 @@
+[submodule "Astrobuild.tips"]
+    path = astrobuild.tips
+    url = https://github.com/menzDev/astrobuild.tips
