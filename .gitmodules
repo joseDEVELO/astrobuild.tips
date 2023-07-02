@@ -1,3 +1,3 @@
-[submodule "Astrobuild.tips"]
-    path = astrobuild.tips
-    url = https://github.com/menzDev/astrobuild.tips
+[submodule "vendor/astrobuilds"]
+	path = vendor/astrobuilds
+	url = https://github.com/menzDev/astrobuild.tips
