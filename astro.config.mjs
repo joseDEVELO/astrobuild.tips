@@ -10,5 +10,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   // ...
   site: 'https://astrobuild.tips',
-  integrations: [tailwind(), mdx(), react(), vue(), svelte(), sitemap()]
+  integrations: [tailwind(), mdx(), react(), vue(), svelte(), sitemap()],
+  site: 'https://menzDev.github.io',
+  base: '/astrobuild.tips',
 });
